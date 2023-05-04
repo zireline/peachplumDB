@@ -119,7 +119,7 @@ app.delete(
 
 export function startServer() {
   // Start the server
-  const port = 6000;
+  const port = 6060;
   app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
   });
