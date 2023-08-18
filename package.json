@@ -21,7 +21,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx tsc -w",
-    "build": "npx tsc && echo Build output to: ./bin"
+    "build": "npx tsc && echo Build output to: ./bin",
+    "deploy": "npm run build && git add --all && git commit -m \"Automated commit step before version increment\" && npm version minor && git push && npm publish"
   },
   "author": "Jerome R. Cabugwason",
   "license": "MIT",
