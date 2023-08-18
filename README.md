@@ -4,10 +4,37 @@ This API provides a basic CRUD (Create, Read, Update, Delete) functionality for 
 
 ## Getting Started
 
-To use the API, you need to start the server by calling the `startServer()` function in `server.ts`. The API listens on port `6000` by default, but you can change the port number if needed.
+### Intall Globally
+```bash
+npm i -g peachplumdb
+```
+
+### Run the server
+Start the server by running `peach`. The server listens on port `6060`
+
+## Usage
+```typescript
+const collectionId = 'yourCollectionId';
+const docId = 'yourDocId';
+
+fetch(`/collections/${collectionId}/${docId}`)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`Request failed with status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log('Document data:', data);
+    // You can handle the retrieved data here
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    // Handle error cases here
+  });
+```
 
 ## Endpoints
-
 The following endpoints are available:
 
 - `GET /collections/:collectionId/:docId`: Retrieves a specific document in a collection.
