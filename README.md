@@ -1,5 +1,7 @@
 # PeachPlumDB API
 
+![image](https://github.com/scriptsynergy/peachplumDB/assets/64959978/2aa03117-039d-43d7-bd28-b3afed70babb)
+<br />
 This API provides a basic CRUD (Create, Read, Update, Delete) functionality for collections and documents stored in PeachPlumDB.
 
 ## Getting Started
